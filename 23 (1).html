@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JQuery (aquele ator engraçado)</title>
+<meta charset="UTF-8"/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	var novoPrimeiroParagrafoDentro = "<p>Apareço antes e dentro do div!</p>";
+	var novoUltimoParagrafoDentro = "<p>Apareço depois e dentro do div!</p>";
+	var novoPrimeiroParagrafoFora =  "<p>Apareço antes e fora do div!</p>";
+	var novoUltimoParagrafoFora = "<p>Apareço depois e fora do div!</p>";
+	
+ $("#div").append($(novoPrimeiroParagrafoDentro));
+  $("#div").prepend($(novoUltimoParagrafoDentro));
+   $("#div").after($(novoUltimoParagrafoFora));
+    $("div").before($(novoPrimeiroParagrafoFora));
+	
+
+	
+});
+</script>
+</head>
+
+<body>
+<h1>Exercício</h1>
+<h2>Utilize os métodos "append()", "prepend()", "after()" e "before()" para posicionar os novos parágrafos nos locais corretos!</h2>
+
+<div id="div" style="background-color: #ff9;">
+<p>Serei o segundo de dentro!</p>
+<p>Serei o terceiro de dentro!</p>
+</div> 
+
+
+
+</body>
+</html>
